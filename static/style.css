@@ -1,1 +1,88 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
 
+/* Header */
+.header {
+    width: 100%;
+    height: 120px;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    margin-top: 10px;
+}
+
+/* ADD THIS (important for single line) */
+.scroll-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Scrolling text (FIXED 🔥) */
+.scroll-text p {
+    display: inline-block;
+    white-space: nowrap;
+    color: yellow;   /* yellow maintain */
+    font-size: 22px;
+    padding-left: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Hacker box */
+.box {
+    border: 2px solid #00ff00;
+    padding: 20px;
+    margin: 30px;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    background: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00ff00;
+    color: black;
+}
+
+/* Dropdown */
+select {
+    background: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px;
+}
+
+/* Typing animation */
+.typing {
+    border-right: 2px solid #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 3s steps(30), blink 0.5s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
