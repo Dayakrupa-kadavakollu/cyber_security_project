@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Attack Logs</h1>
+
+    <div class="box">
+
+        {% for log in logs %}
+            <p>
+                IP: {{ log.ip }} |
+                Attack: {{ log.attack }} |
+                Defense: {{ log.defense }} |
+                Status: {{ log.status }}
+            </p>
+            <hr>
+        {% endfor %}
+
+    </div>
+
+    <br>
+
+    <a href="/dashboard">
+        <button>Back</button>
+    </a>
+
+</body>
+</html>

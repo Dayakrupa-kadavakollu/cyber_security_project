@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1 class="typing">Cyber Security Control Panel</h1>
+
+    <div class="box">
+
+        <h3>Total Users: {{ total_users }}</h3>
+        <h3>Blocked Users: {{ blocked }}</h3>
+
+        <hr>
+
+        <!-- UPDATED FORM -->
+        <form action="/simulate" method="post" onsubmit="showLoading()">
+
+            <p>Select Attack Type:</p>
+
+            <select name="attack">
+                <option>Phishing</option>
+                <option>Malware</option>
+                <option>DDoS</option>
+                <option>Password Attack</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Run Simulation</button>
+
+            <!-- AI Thinking Text -->
+            <p id="loading" style="display:none; color:yellow; margin-top:10px;">
+                AI Thinking...
+            </p>
+
+        </form>
+
+        <br>
+
+        <a href="/logs">
+            <button>View Logs</button>
+        </a>
+
+    </div>
+
+    <br>
+    <a href="/">
+        <button>Back to Home</button>
+    </a>
+
+    <!-- SCRIPT (NEW) -->
+    <script>
+        function showLoading() {
+            document.getElementById("loading").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Security Shield</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
+<body>
+
+    <!-- Header Image -->
+    <img src="{{ url_for('static', filename='header.png') }}" class="header">
+
+    <!-- Logo -->
+    <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+
+    <!-- Slow Scrolling Text -->
+    <div class="scroll-text">
+        <p>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</p>
+    </div>
+
+    <br><br>
+
+    <!-- Button -->
+    <a href="/dashboard">
+        <button>Start Project</button>
+    </a>
+
+</body>
+</html>
